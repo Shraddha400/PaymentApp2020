@@ -13,6 +13,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.example.paymentapp2020.ui.category.CategoryFragment;
+
 import com.example.paymentapp2020.ui.home.HomeFragment;
 import com.example.paymentapp2020.ui.message.MessageFragment;
 import com.example.paymentapp2020.ui.notifications.NotificationsFragment;
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                         case R.id.message:
                             selectedFragment = new MessageFragment();
                             break;
+
                     }
                     assert selectedFragment != null;
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();

@@ -29,10 +29,13 @@
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="407dp"
-            android:layout_height="615dp"
+            android:layout_height="750dp"
             app:layout_constraintBottom_toTopOf="@+id/bottom_nav_menu"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="#C5CAE9">
+
+        </FrameLayout>
 <!--        <fragment-->
 <!--            android:id="@+id/nav_host_fragment"-->
 <!--            android:name="androidx.navigation.fragment.NavHostFragment"-->
