@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@+id/SideGroup"
+        android:checkableBehavior="single"
+        >
+        <item android:title="Account Setup">
+            <menu>
+        <item android:id="@+id/setting"
+            android:title="@string/setting"
+            android:icon="@drawable/ic_baseline_settings_24"
+            />
+        <item android:id="@+id/privacy"
+            android:title="@string/privacy"
+            android:icon="@drawable/ic_baseline_security_24"
+            app:showAsAction="ifRoom|withText"/>
+        <item android:id="@+id/logout"
+            android:title="@string/logout"
+            android:icon="@drawable/ic_baseline_power_settings_new_24"
+            app:showAsAction="ifRoom|withText"/>
+            </menu>
+        </item>
+    </group>
+    <group android:id="@+id/teansaction_group"
+        android:checkableBehavior="single">
+        <item android:title="Transactions">
+            <menu>
+                <item
+                    android:id="@+id/Purchases"
+                    android:title="Purchases"
+                    android:icon="@drawable/ic_baseline_add_shopping_cart_24"/>
+                <item android:id="@+id/Coupens"
+                    android:title="Rewards"
+                    android:icon="@drawable/ic_baseline_card_giftcard_24"/>
+            </menu>
+        </item>
+    </group>
+    <group android:id="@+id/help_group"
+        android:checkableBehavior="single">
+        <item android:title="Support">
+            <menu>
+                <item
+                    android:id="@+id/Help_center"
+                    android:title="Help Center"
+                    android:icon="@drawable/ic_baseline_help_24"/>
+                <item android:id="@+id/Report"
+                    android:title="Report"
+                    android:icon="@drawable/ic_baseline_report_problem_24"/>
+                <item android:id="@+id/About"
+                    android:title="About Us"
+                    android:icon="@drawable/ic_baseline_business_24"/>
+                <item android:id="@+id/Contact"
+                    android:title="Contact Us"
+                    android:icon="@drawable/ic_baseline_contact_phone_24"/>
+            </menu>
+        </item>
+    </group>
+    <group android:id="@+id/Standards"
+        android:checkableBehavior="single">
+        <item android:title="Privary Policy">
+
+        </item>
+    </group>
+</menu>
