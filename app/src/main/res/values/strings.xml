@@ -32,5 +32,9 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="login">Login</string>
+    <string name="welcome">Welcome To Shop Now</string>
+    <string name="login_button">Login</string>
+    <string name="signup_button">Signup</string>
 
 </resources>

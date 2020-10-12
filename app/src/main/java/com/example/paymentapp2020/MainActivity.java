@@ -39,7 +39,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setSupportActionBar(toolbar);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_menu);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
-
+//Hide or show Items
+        Menu menu =navigationView.getMenu();
+        menu.findItem(R.id.logout).setVisible(false);
         navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_open,R.string.navigation_close);
         drawerLayout.addDrawerListener(toggle);
@@ -108,7 +110,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent intent =new Intent(MainActivity.this,SettingsActivity.class);
                 startActivity(intent);
             break;
-            case R.id.privacy:
+            case R.id.login:
+                Intent move =new Intent(MainActivity.this,LoginActivity.class);
+                startActivity(move);
 
                 break;
 
