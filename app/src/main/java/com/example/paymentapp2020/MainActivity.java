@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.paymentapp2020.ui.category.CategoryFragment;
 
@@ -20,26 +21,43 @@ import com.example.paymentapp2020.ui.home.HomeFragment;
 import com.example.paymentapp2020.ui.message.MessageFragment;
 import com.example.paymentapp2020.ui.notifications.NotificationsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.Objects;
 
+
+
+
+
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
     private Toolbar toolbar;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
+    public FloatingActionButton fab_add_post;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toolbar=findViewById(R.id.toolbar);
+        fab_add_post=findViewById(R.id.fab_add_post);
+        fab_add_post.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,SelectProductType.class);
+                startActivity(intent);
+            }
+        });
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.nav_view);
         setSupportActionBar(toolbar);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_menu);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
 //Hide or show Items
+        bottomNavigationView.setItemIconTintList(null);
         Menu menu =navigationView.getMenu();
         menu.findItem(R.id.logout).setVisible(false);
         navigationView.bringToFront();
@@ -120,4 +138,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

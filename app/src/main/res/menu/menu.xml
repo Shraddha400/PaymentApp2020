@@ -3,19 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <group android:id="@+id/toolbar_group" android:checkableBehavior="single">
 
+
         <item
             android:id="@+id/app_bar_search"
             android:icon="@drawable/ic_search_black_24dp"
             android:title="Search"
-            app:showAsAction="ifRoom|withText"
-            app:actionViewClass="android.widget.SearchView" />
+            app:actionViewClass="android.widget.SearchView"
+            app:showAsAction="ifRoom"/>
         <item android:id="@+id/camera"
             android:title="@string/camera"
             android:icon="@drawable/ic_baseline_camera_alt_24"
             app:showAsAction="ifRoom|withText"/>
         <item android:id="@+id/news"
             android:title="News"
-            android:icon="@drawable/icons8_news_26px_1"
+            android:icon="@drawable/new_24"
             app:showAsAction="ifRoom|withText"/>
 
 
